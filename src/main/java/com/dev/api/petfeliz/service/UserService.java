@@ -1,6 +1,6 @@
 package com.dev.api.petfeliz.service;
 
-import com.dev.api.petfeliz.entity.UserEntity;
+import com.dev.api.petfeliz.entity.user.UserEntity;
 import com.dev.api.petfeliz.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +19,6 @@ public class UserService extends AbstractService<UserEntity, Long, UserRepositor
 
     public UserService(UserRepository userRepository) {
         super(userRepository);
-    }
-
-    public UserEntity createUser(UserEntity user) {
-        if (user.getAddress() != null) {
-            user.setAddress(addressService.save(user.getAddress()));
-        }
-        return userRepository.save(user);
     }
 
     @Override

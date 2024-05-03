@@ -1,5 +1,6 @@
 package com.dev.api.petfeliz.entity;
 
+import com.dev.api.petfeliz.entity.user.UserEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

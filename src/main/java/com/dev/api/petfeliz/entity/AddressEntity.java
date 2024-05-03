@@ -52,4 +52,17 @@ public class AddressEntity {
     @NotNull
     @Column(name = "longitude", nullable = false)
     private String longitude;
+
+    public AddressEntity(String street, String city, String buildingNumber, String district, String state, String country, String postalCode, String latitude, String longitude) {
+        this.street = street;
+        this.city = city;
+        this.buildingNumber = buildingNumber;
+        this.district = district;
+        this.state = state;
+        this.country = country;
+        this.postalCode = postalCode;
+        this.latitude = latitude;
+        this.longitude = longitude;
+
+    }
 }

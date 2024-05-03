@@ -16,42 +16,36 @@ public class PetController {
     @Autowired
     private PetService petService;
 
-    // Apenas usuário ADMIN
     @ResponseStatus(HttpStatus.OK)
     @GetMapping
     public List<PetEntity> findAllPets() {
         return petService.findAll();
     }
 
-    // Usuário logado
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/user/{userId}")
     public List<PetEntity> findAllPetsByUserId(@PathVariable Long userId) {
         return petService.findAllPetsByUserId(userId);
     }
 
-    // Usuário logado
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{id}")
     public PetEntity getPetById(@PathVariable Long id) {
         return petService.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet with ID " + id + " not found"));
     }
 
-    // Usuário logado
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public PetEntity createPet(@RequestBody PetEntity pet) {
         return petService.save(pet);
     }
 
-    // Usuário logado
     @ResponseStatus(HttpStatus.OK)
     @PutMapping("/{id}")
     public PetEntity updatePet(@PathVariable Long id, @RequestBody PetEntity pet) {
         return petService.update(id, pet);
     }
 
-    // Usuário logado
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void deletePet(@PathVariable Long id) {
