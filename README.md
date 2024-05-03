@@ -249,4 +249,9 @@ Para executar a PetFeliz API localmente, siga as instruções abaixo:
 ---
 ## Autor
 
-Desenvolvido por Rafael Isidro.
+<a href="https://github.com/rafael-isidro">
+    <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/118776145?v=4" width="100px;" alt="Foto de perfil - Rafael Isidro"/>
+    <br />
+    <sub><b>Rafael Santos Isidro</b></sub>
+</a> 
+<br />
